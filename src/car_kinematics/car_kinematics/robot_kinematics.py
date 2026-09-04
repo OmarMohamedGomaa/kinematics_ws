@@ -71,7 +71,7 @@ class FourWheelOmniKinematics(Kinematics):
 
         vx = self.R * (1/4 * (w1 + w2 + w3 + w4))
         vy = self.R * (-1/4 * (w1 - w2 + w3 - w4))
-        wz = self.R * (-1/(4*self.L) * (w1 + w2 - w3 - w4))
+        wz = self.R * (-1/(4*self.L) * (w1 - w2 - w3 + w4))
 
         return vx, vy, wz
 
