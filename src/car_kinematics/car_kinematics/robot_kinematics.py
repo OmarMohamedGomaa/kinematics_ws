@@ -73,4 +73,27 @@ class FourWheelOmniKinematics(Kinematics):
         vy = self.R * (-1/4 * (w1 - w2 + w3 - w4))
         wz = self.R * (-1/(4*self.L) * (w1 + w2 - w3 - w4))
 
-        return vx, vy, wz    
+        return vx, vy, wz
+
+class DiffDriveKinematics(Kinematics):
+    def inverse(self, vx, vy, wz):
+        v_left = vx - wz * self.L
+        v_right = vx + wz * self.L
+ 
+        w_left = v_left / self.R
+        w_right = v_right / self.R
+ 
+        return [w_left, w_right, w_left, w_right]
+ 
+    def forward(self, w):
+        w_left = (w[0] + w[2]) / 2.0
+        w_right = (w[1] + w[3]) / 2.0
+ 
+        v_left = w_left * self.R
+        v_right = w_right * self.R
+ 
+        vx = (v_left + v_right) / 2.0
+        vy = 0.0
+        wz = (v_right - v_left) / (2.0 * self.L)
+ 
+        return vx, vy, wz 
