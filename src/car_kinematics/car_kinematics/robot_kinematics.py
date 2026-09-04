@@ -26,9 +26,30 @@ class MecanumKinematics(Kinematics):
     def forward(self, w):
         w_fl, w_fr, w_rl, w_rr = w
         k = self.L + self.W
- 
+
         vx = (self.R / 4.0) * (w_fl + w_fr + w_rl + w_rr)
         vy = (self.R / 4.0) * (-w_fl + w_fr + w_rl - w_rr)
         wz = (self.R / (4.0 * k)) * (-w_fl + w_fr - w_rl + w_rr)
  
         return vx, vy, wz
+
+class ThreeWheelOmniKinematics(Kinematics):
+
+    def inverse(self, vx, vy, wz):
+
+        w1 = 1/self.R *(vy + self.L* wz)
+        w2 = 1/self.R *((-math.sqrt(3)/2)*vx - 1/2*vy + self.L* wz)
+        w3 = 1/self.R *((math.sqrt(3)/2)*vx - 1/2*vy + self.L* wz)
+
+
+        return w1 , w2 , w3
+
+
+    def forward(self, w):
+        w1, w2, w3 = w
+
+        vx = self.R * (math.sqrt(3)/3 * (-w2 + w3))
+        vy = self.R * (1/3 * (w1 - 1/2*w2 - 1/2*w3))
+        wz = self.R * (1/(3*self.L) * (w1 + w2 + w3))
+
+        return vx, vy, wz   
