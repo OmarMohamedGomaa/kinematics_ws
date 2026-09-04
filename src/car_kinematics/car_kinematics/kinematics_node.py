@@ -1,5 +1,5 @@
 
-from .robot_kinematics import FourWheelOmniKinematics , DiffDriveKinematics ,ThreeWheelOmniKinematics , MecanumKinematics
+from car_kinematics.robot_kinematics import FourWheelOmniKinematics , DiffDriveKinematics ,ThreeWheelOmniKinematics , MecanumKinematics
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -24,8 +24,8 @@ class KinematicsNode(Node):
 		track_width = self.get_parameter('track_width').value
 		wheel_radius = self.get_parameter('wheel_radius').value
         
-		self.subscribe_vel = self.create_subscription(Twist, cmd_vel_topic,self.vel_callback,10)       
-		self.pub_wheels = self.create_publisher(Float64MultiArray, wheels_topic, 10)  
+		self.subscribe_vel = self.create_subscription(Twist, '/cmd_vel',self.vel_callback,10)       
+		self.pub_wheels = self.create_publisher(Float64MultiArray, '/wheel_set_points', 10)  
 		if drive_type == "fourWheel":
 			self.drive_kinematics = FourWheelOmniKinematics(L=wheel_base , W=track_width, R=wheel_radius)
 		elif drive_type == "diffDrive":
