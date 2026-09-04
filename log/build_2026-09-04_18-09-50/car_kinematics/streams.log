@@ -1,0 +1,33 @@
+[1.874s] Invoking command in '/home/omar/kinematics_ws/src/car_kinematics': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/omar/kinematics_ws/build/car_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/car_kinematics build --build-base /home/omar/kinematics_ws/build/car_kinematics/build install --record /home/omar/kinematics_ws/build/car_kinematics/install.log --install-scripts $base/lib/car_kinematics --single-version-externally-managed install_data
+[2.516s] running egg_info
+[2.571s] writing ../../build/car_kinematics/car_kinematics.egg-info/PKG-INFO
+[2.572s] writing dependency_links to ../../build/car_kinematics/car_kinematics.egg-info/dependency_links.txt
+[2.572s] writing entry points to ../../build/car_kinematics/car_kinematics.egg-info/entry_points.txt
+[2.572s] writing requirements to ../../build/car_kinematics/car_kinematics.egg-info/requires.txt
+[2.573s] writing top-level names to ../../build/car_kinematics/car_kinematics.egg-info/top_level.txt
+[2.573s] writing manifest file '../../build/car_kinematics/car_kinematics.egg-info/SOURCES.txt'
+[2.686s] reading manifest file '../../build/car_kinematics/car_kinematics.egg-info/SOURCES.txt'
+[2.688s] writing manifest file '../../build/car_kinematics/car_kinematics.egg-info/SOURCES.txt'
+[2.688s] running build
+[2.688s] running build_py
+[2.689s] copying car_kinematics/kinematics_node.py -> /home/omar/kinematics_ws/build/car_kinematics/build/lib/car_kinematics
+[2.689s] copying car_kinematics/__init__.py -> /home/omar/kinematics_ws/build/car_kinematics/build/lib/car_kinematics
+[2.689s] copying car_kinematics/robot_kinematics.py -> /home/omar/kinematics_ws/build/car_kinematics/build/lib/car_kinematics
+[2.689s] running install
+[2.701s] running install_lib
+[2.759s] copying /home/omar/kinematics_ws/build/car_kinematics/build/lib/car_kinematics/kinematics_node.py -> /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics
+[2.760s] copying /home/omar/kinematics_ws/build/car_kinematics/build/lib/car_kinematics/__init__.py -> /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics
+[2.760s] copying /home/omar/kinematics_ws/build/car_kinematics/build/lib/car_kinematics/robot_kinematics.py -> /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics
+[2.761s] byte-compiling /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics/kinematics_node.py to kinematics_node.cpython-312.pyc
+[2.763s] byte-compiling /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics/__init__.py to __init__.cpython-312.pyc
+[2.763s] byte-compiling /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics/robot_kinematics.py to robot_kinematics.cpython-312.pyc
+[2.765s] running install_data
+[2.766s] copying resource/car_kinematics -> /home/omar/kinematics_ws/install/car_kinematics/share/ament_index/resource_index/packages
+[2.766s] copying package.xml -> /home/omar/kinematics_ws/install/car_kinematics/share/car_kinematics
+[2.766s] running install_egg_info
+[2.827s] removing '/home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics-0.0.0-py3.12.egg-info' (and everything under it)
+[2.828s] Copying ../../build/car_kinematics/car_kinematics.egg-info to /home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages/car_kinematics-0.0.0-py3.12.egg-info
+[2.829s] running install_scripts
+[3.253s] Installing kinematics_node script to /home/omar/kinematics_ws/install/car_kinematics/lib/car_kinematics
+[3.253s] writing list of installed files to '/home/omar/kinematics_ws/build/car_kinematics/install.log'
+[3.313s] Invoked command in '/home/omar/kinematics_ws/src/car_kinematics' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/omar/kinematics_ws/build/car_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/kinematics_ws/install/car_kinematics/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/car_kinematics build --build-base /home/omar/kinematics_ws/build/car_kinematics/build install --record /home/omar/kinematics_ws/build/car_kinematics/install.log --install-scripts $base/lib/car_kinematics --single-version-externally-managed install_data
