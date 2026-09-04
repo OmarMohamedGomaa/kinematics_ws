@@ -53,3 +53,24 @@ class ThreeWheelOmniKinematics(Kinematics):
         wz = self.R * (1/(3*self.L) * (w1 + w2 + w3))
 
         return vx, vy, wz   
+
+
+class FourWheelOmniKinematics(Kinematics):
+
+    def inverse(self, vx, vy, wz):
+        w1 = 1/self.R * (vx - vy - self.L* wz)
+        w2 = 1/self.R * (vx + vy + self.L* wz)
+        w3 = 1/self.R * (vx - vy + self.L* wz)
+        w4 = 1/self.R * (vx + vy - self.L* wz)
+
+        return w1 , w2 , w3 , w4
+
+
+    def forward(self, w):
+        w1, w2, w3, w4 = w
+
+        vx = self.R * (1/4 * (w1 + w2 + w3 + w4))
+        vy = self.R * (-1/4 * (w1 - w2 + w3 - w4))
+        wz = self.R * (-1/(4*self.L) * (w1 + w2 - w3 - w4))
+
+        return vx, vy, wz    
