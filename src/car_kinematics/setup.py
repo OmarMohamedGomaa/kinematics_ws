@@ -25,6 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'kinematics_node = car_kinematics.kinematics_node:main',
+            'odometry_node = car_kinematics.wheel_odometry_node:main',
+            'robot_kinematics = car_kinematics.robot_kinematics:main',
         ],
     },
 )
